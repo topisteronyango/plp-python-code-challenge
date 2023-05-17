@@ -35,7 +35,7 @@ def generate_password(length=8):
         return password
 
     # Returns a text if validation fails
-    return "Invalid password, validation fails!"
+    return "Invalid password, validation fails. Rerun the program!"
 
 # calling the generate_password function with the provided length, and the resulting password 
 # is stored in the password variable.
