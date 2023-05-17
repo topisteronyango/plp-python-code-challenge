@@ -28,7 +28,10 @@ The generated password is then printed to the console.
 
 # Assumptions
 The code assumes that the user will enter a valid integer value for the desired password length when prompted.
+
 It is assumed that the generated password will be printed to the console for the user to see.
+
 The validation check assumes that the password must contain at least one uppercase letter, one lowercase letter, one digit, and one symbol character. If any of these requirements is not met, the password is considered invalid.
+
 The generate_password function assumes that the length parameter passed to it is a positive integer representing the desired length of the password.
 
