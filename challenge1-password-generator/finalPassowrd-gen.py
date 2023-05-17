@@ -3,15 +3,18 @@ import random
 import string
 
 def generate_password(length=8):
+    # Converting character categories to lists
     uppercase_letters = list(string.ascii_uppercase)
     lowercase_letters = list(string.ascii_lowercase)
     digits = list(string.digits)
     symbols = list(string.punctuation)
 
+    # Combining all character categories into a single list
     all_characters = uppercase_letters + lowercase_letters + digits + symbols
 
     # print(type(all_characters))
 
+    # Ensure minimum password length
     if length < 8:
         length = 8
 
