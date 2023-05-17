@@ -1,0 +1,23 @@
+How the code should work
+
+1. The program starts by importing the necessary libraries: random for generating random numbers and time for measuring execution time.
+
+2. The generate_random_numbers function is defined to generate a list of random numbers. It takes the desired size as a parameter and uses a list comprehension along with random.randint to generate random numbers between 1 and 1000. The function returns the generated list.
+
+3. The quicksort function implements the quicksort algorithm for sorting a list of numbers. It uses recursion to divide the list into smaller sublists based on a pivot element. The function first checks if the list is empty or contains only one element (the base case). If so, it returns the list as is. Otherwise, it selects a pivot element (in this case, the middle element), and partitions the list into three sublists: elements less than the pivot, elements equal to the pivot, and elements greater than the pivot. It recursively applies the quicksort algorithm to the left and right sublists, and finally concatenates the sorted sublists along with the pivot element. The function returns the sorted list.
+
+4. In the main part of the program, the desired size of the list of random numbers is specified.
+
+5. The generate_random_numbers function is called to generate the list of random numbers.
+
+6. The start time is recorded using time.time().
+
+7. The quicksort function is called to sort the list of numbers.
+
+8. The end time is recorded using time.time().
+
+9. The execution time is calculated by subtracting the start time from the end time.
+
+10. The sorted numbers and the execution time are printed.
+
+When you run this program, it will generate a set of random numbers, sort them using the quicksort algorithm, and print the sorted numbers along with the execution time. You can modify the size of the random numbers or customize the program to experiment with different input sizes or sorting algorithms.

@@ -1,0 +1,23 @@
+How the code should work:
+
+1. The program starts by importing the necessary libraries: random for generating random numbers and re for working with regular expressions.
+
+2. The read_text_file function is defined to read the contents of a text file and preprocess the text. It takes the filename as a parameter and opens the file using the specified encoding (in this case, utf-8). The function reads the file contents, removes unnecessary characters using regular expressions, and splits the text into individual words. The function returns a list of words.
+
+3. The build_markov_model function is defined to build the Markov chain model from the input text. It takes the list of words as a parameter. Inside the function, an empty dictionary called model is created to store the model. The function iterates through the list of words and for each word, it checks if the word is already in the model dictionary. If not, a new key is added to the model dictionary with an empty list as the value. The next word in the list is then appended to the value list associated with the current word. Finally, the function returns the completed model dictionary.
+
+4. The generate_random_sentence function is defined to generate a random sentence using the Markov chain model. It takes the model dictionary and an optional length parameter that specifies the length of the sentence to be generated (default is 10). Inside the function, a random starting word is selected from the keys of the model dictionary. The starting word is appended to a list called sentence. The function then iterates length - 1 times and for each iteration, it checks if the current word is in the model dictionary. If not, the loop breaks. Otherwise, a random next word is selected from the value list associated with the current word, and it is appended to the sentence list. The current word is then updated to the next word. Finally, the function joins the words in the sentence list into a single string separated by spaces and returns the generated sentence.
+
+5. In the main part of the program, the filename of the text file is specified.
+
+6. The read_text_file function is called to read and preprocess the text file.
+
+7. The build_markov_model function is called to build the Markov chain model from the input text.
+
+8. The desired length of the random sentence is specified.
+
+9. The generate_random_sentence function is called to generate a random sentence using the Markov chain model and the specified length.
+
+10. The random sentence is printed.
+
+When you run this program, it will read in a text file, create a Markov chain model of the text, and generate a random sentence using the model. You can customize the program by providing your own text file or adjusting the length of the generated sentence

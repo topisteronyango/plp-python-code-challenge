@@ -1,0 +1,21 @@
+1. The program begins by importing the random and time modules. The random module is used to generate random choices in the maze generation, and the time module is used to calculate the elapsed time.
+
+2. Constants are defined for the maze dimensions (WIDTH and HEIGHT) and the symbols used in the maze (WALL, PATH, START, FINISH, VISITED).
+
+3. The generate_maze function is defined to generate a random maze. It initializes a 2D list representing the maze, with all cells initially set as walls (WALL). The maze generation uses the depth-first search algorithm. It starts from the top-left corner, randomly selects neighboring cells, and carves a path by replacing walls with empty spaces (PATH). The start and finish positions are marked with START and FINISH symbols, respectively. The generated maze is returned.
+
+4. The solve_maze function is defined to solve the maze using the depth-first search algorithm. It takes the maze, current coordinates (x, y), and the start time as parameters. The function recursively explores the maze by checking neighboring cells. If it reaches the finish position, it returns True. If a cell is not a valid path (PATH) or has already been visited (VISITED), it returns False. The function marks the current cell as VISITED and recursively calls itself for neighboring cells. If a solution is found, it backtracks and marks the current cell as PATH again. The function also checks the elapsed time and raises a TimeoutError if it exceeds the given time limit of 10 seconds.
+
+5. The print_maze function is defined to print the maze in a visually readable format. It iterates over each row of the maze and joins the symbols with spaces to form a row.
+
+6. In the main part of the program, the start time is recorded using time.time().
+
+7. The generate_maze function is called to generate a random maze.
+
+8. The solve_maze function is called to solve the maze, starting from the top-left corner (coordinates 0, 0) and passing the start time.
+
+9. The print_maze function is called to print the solved maze.
+
+10. The elapsed time is calculated by subtracting the start time from the current time using time.time(). The elapsed time is then printed.
+
+When you run this program, it will generate a random maze, solve it using the depth-first search algorithm, display the maze with the solved path, and calculate the elapsed time taken to solve the maze.

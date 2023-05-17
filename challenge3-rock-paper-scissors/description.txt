@@ -1,0 +1,24 @@
+How the code should work:
+
+1. The program begins by importing the random module, which is used to generate the computer's choice.
+
+2. The get_user_choice function is defined, which prompts the user to enter their choice and returns it. A while loop is used to repeatedly prompt the user until they enter a valid choice ('rock', 'paper', or 'scissors').
+
+3. The get_computer_choice function is defined, which generates a random choice for the computer using the random.choice function.
+
+4. The determine_winner function is defined, which takes the user's choice and the computer's choice as parameters and determines the winner based on the standard rules of the game. If the user and computer make the same choice, the game is a tie. Otherwise, the winner is determined based on the following logic:
+
+    -If the user chooses rock and the computer chooses scissors, the user wins.
+    -If the user chooses paper and the computer chooses rock, the user wins.
+    -If the user chooses scissors and the computer chooses paper, the user wins.
+    -Otherwise, the computer wins.
+
+5. In the main part of the program, the game is started with a welcome message.
+
+6. The user is prompted to enter their choice using the get_user_choice function.
+
+7. The computer's choice is generated using the get_computer_choice function, and the choice is printed.
+
+8. The winner is determined using the determine_winner function, and the result is printed.
+
+When you run this program, it will prompt the user to enter their choice of rock, paper, or scissors. The computer will randomly generate its choice, and the program will determine the winner based on the standard rules of the game.

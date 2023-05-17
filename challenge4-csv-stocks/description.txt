@@ -1,0 +1,33 @@
+How the code should work:
+
+1. The program begins by importing the csv module, which is used to read and process the CSV file.
+
+2. The calculate_average_return function is defined, which takes the filename as a parameter.
+
+3. Inside the function, an empty dictionary stock_returns is created to store the daily returns for each stock.
+
+4. The CSV file is opened using a with statement to ensure proper handling and automatic closing. The csv.reader is used to read the file.
+
+5. The next(reader) skips the header row in the CSV file.
+
+6. A loop is used to iterate over each row in the CSV file. The stock name, close price, and previous close price are extracted from each row.
+
+7. The daily return is calculated using the formula (close_price - prev_close_price) / prev_close_price.
+
+8. If the stock is already present in the stock_returns dictionary, the daily return is appended to the corresponding list. Otherwise, a new list is created with the daily return for that stock.
+
+9. After processing all the rows, another dictionary average_returns is created to store the average daily returns for each stock.
+
+10. A loop is used to calculate the average return for each stock by dividing the sum of the returns by the number of returns in the list.
+
+11. The sorted function is used to sort the average_returns dictionary based on the values (average returns) in descending order. The [:10] slice is used to get the top 10 performing stocks.
+
+12. The list of top performing stocks is returned by the calculate_average_return function.
+
+13. In the main part of the program, the filename variable is set to the name of the CSV file that you want to process. Make sure that the file exists in the same directory as the Python script, or provide the full path to the file.
+
+14. The calculate_average_return function is called with the filename, and the resulting list of top performing stocks is stored in the top_stocks variable.
+
+15. Finally, the program prints the header "Top 10 Performing Stocks:" and then iterates over each stock and average return in top_stocks, printing them one by one using a formatted string.
+
+When you run this program with a valid CSV file, it will read the file, calculate the average daily return for each stock, and display the top 10 performing stocks along with their average returns.

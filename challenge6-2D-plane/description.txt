@@ -1,0 +1,29 @@
+How the code should work:
+
+1. The program starts by defining some constants: POPULATION_SIZE (number of individuals in each generation), GENERATION_COUNT (number of generations to evolve), and MUTATION_RATE (probability of mutation).
+
+2. The generate_coordinates function is defined to generate a given number of random coordinates on a 2D plane. It uses the random.uniform function to generate random values within the range [0, 100] for both x and y coordinates. The coordinates are stored as tuples in a list and returned.
+
+3. The calculate_distance function calculates the Euclidean distance between two points using the distance formula.
+
+4. The calculate_total_distance function calculates the total distance of a given path by summing up the distances between consecutive points.
+
+5. The generate_initial_population function generates an initial population of random paths. Each path is a permutation of the indices representing the points to be visited. The function shuffles the indices using random.shuffle and adds the resulting path to the population. It repeats this process to create the desired population size.
+
+6. The crossover function performs single-point crossover on two parent paths. It randomly selects a crossover point and creates two child paths by combining the genes from the parents. Each gene is included in the child only if it hasn't been selected before. The function returns the two child paths.
+
+7. The mutate function performs mutation on a path. It randomly selects two indices and swaps the corresponding genes in the path.
+
+8. The evolve function performs selection and evolution to create the next generation. It selects a portion of the best-performing individuals (elites) based on their total distance. It then performs crossover and mutation on randomly selected parents to create the remaining individuals of the next generation. The function returns the new generation.
+
+9. In the main part of the program, random coordinates are generated using the generate_coordinates function.
+
+10. An initial population is generated using the generate_initial_population function.
+
+11. The evolution process is performed for the specified number of generations. The evolve function is called to create the next generation.
+
+12. After evolution, the best path is determined by finding the path with the minimum total distance in the final population.
+
+13. The best path and its total distance are printed.
+
+When you run this program, it will generate a set of random coordinates on a 2D plane, apply a genetic algorithm to find the shortest path that visits each point exactly once, and print the best path along with its total distance. The program can be modified by adjusting the constants or customizing the genetic operators to experiment with different variations of the genetic algorithm.

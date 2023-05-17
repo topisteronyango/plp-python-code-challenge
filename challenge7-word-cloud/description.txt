@@ -1,0 +1,20 @@
+How should the code work:
+
+
+1. The program starts by importing the necessary libraries: matplotlib.pyplot for displaying images and wordcloud for generating word clouds.
+
+2. The read_text_file function is defined to read the contents of a text file. It takes the filename as a parameter, opens the file using the specified encoding (in this case, utf-8), reads the file contents, and returns the text.
+
+3. The generate_word_cloud function is defined to generate a word cloud from the input text. It takes the text as a parameter. Inside the function, a WordCloud object is created with a specified width, height, and background color. The generate method is then called on the WordCloud object, passing the input text as the argument. This generates the word cloud based on the frequency of each word in the text. The function returns the generated word cloud.
+
+4. The display_word_cloud function is defined to display the word cloud as an image. It takes the word cloud object as a parameter. Inside the function, a plot figure is created with a specified size. The word cloud image is displayed using the imshow function from matplotlib.pyplot, and the axis is turned off using axis('off'). Finally, the image is shown using plt.show().
+
+5. In the main part of the program, the filename of the text file to be read is specified.
+
+6. The read_text_file function is called to read the text from the file.
+
+7. The generate_word_cloud function is called to generate the word cloud based on the text.
+
+8. The display_word_cloud function is called to display the word cloud as an image.
+
+When you run this program, it will read the text file, generate a word cloud based on the frequency of each word in the text, and display the word cloud as an image. You can customize the appearance of the word cloud by modifying the parameters of the WordCloud object in the generate_word_cloud function.

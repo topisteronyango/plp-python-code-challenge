@@ -1,0 +1,21 @@
+How the code should work
+
+1. The program starts by importing the necessary libraries: requests for sending HTTP requests, BeautifulSoup for parsing HTML content, and matplotlib.pyplot for creating visualizations.
+
+2. The URL of the news website to scrape is specified.
+
+3. A GET request is sent to the website using the requests.get function, and the response is stored in the response variable.
+
+4. A BeautifulSoup object is created by passing the HTML content from the response to the BeautifulSoup constructor. The "html.parser" is specified as the parser.
+
+5. The program uses the BeautifulSoup object to find the relevant elements on the webpage that contain the data on the topics. In this example, the program assumes that the topics are stored in <a> tags with the class "news-topic". The find_all method is used to find all such elements, and their text content is extracted and stored in the topics list.
+
+6. A dictionary called topic_counts is created to store the counts of each topic. The program iterates over the topics list and counts the occurrences of each topic using a loop. The get method of the dictionary is used to increment the count for each topic.
+
+7. The program prepares the data for visualization by extracting the labels (topic names) and sizes (topic counts) from the topic_counts dictionary.
+
+8. The plt.pie function is called to generate the pie chart. The sizes list is passed as the data to be plotted, and the labels list is used to label the sectors of the pie. The autopct parameter formats the percentage labels on the chart. The plt.axis('equal') ensures that the pie chart is displayed as a circle. The plt.title function is used to set the title of the chart.
+
+9. Finally, the plt.show function is called to display the pie chart.
+
+When you run this program, it will scrape the specified news website for data on the most common topics, calculate their frequencies, and create a pie chart to visualize the distribution of topics. You can customize the program by modifying the URL, the HTML structure used to locate the topic elements, or the appearance of the pie chart using the available options provided by the matplotlib.pyplot library.

@@ -1,0 +1,23 @@
+How the code should work:
+
+1. The program begins by importing the necessary modules, re for regular expressions and Counter from the collections module to count the occurrences of words.
+
+2. The count_words function is defined, which takes the filename as a parameter.
+
+3. Inside the function, the file is opened using a with statement to ensure proper handling and automatic closing. The content of the file is read and stored in the text variable.
+
+4. Regular expressions are used to extract words from the text. The re.findall function is used with the pattern \b\w+\b to match all word-like sequences. The lower() method is called on the text to convert all words to lowercase, so that the counting is case-insensitive.
+
+5. The Counter class is used to count the occurrences of each word. It takes the list of words as input and creates a dictionary where the keys are the words and the values are the corresponding counts.
+
+6. To obtain the top 10 most frequent words, the most_common method of the Counter object is called, specifying 10 as the argument. This method returns a list of tuples, where each tuple contains a word and its count.
+
+7. The list of top words is returned by the count_words function.
+
+8. In the main part of the program, the filename variable is set to the name of the text file that you want to process. Make sure that the file exists in the same directory as the Python script, or provide the full path to the file.
+
+9. The count_words function is called with the filename, and the resulting list of top words is stored in the top_words variable.
+
+10. Finally, the program prints the header "Top 10 Most Frequent Words:" and then iterates over each word and count in top_words, printing them one by one using a formatted string.
+
+When you run this program with a valid text file, it will read the file, count the occurrences of each word, and display the top 10 most frequent words along with their counts.
