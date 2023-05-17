@@ -28,7 +28,7 @@ def determine_winner(user_choice, computer_choice):
         return "Computer wins!"
 
 # Start the game with the welcome message
-print("Welcome to Rock, Paper, Scissors!")
+print("Welcome to Rock, Paper, Scissors Game!")
 
 # Prompting the user to enter their choice
 user_choice = get_user_choice()
