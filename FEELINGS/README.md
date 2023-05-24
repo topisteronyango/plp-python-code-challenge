@@ -1,1 +1,1 @@
-![App UI BEFORE USER INPUT](C:\Users\HP\Desktop\MyStuffs\Power Learn Project\PLP-Python-Challenge\imageBeforeUserInput.png)
+![App UI BEFORE USER INPUT](plp-python-code-challenge/FEELINGS/imageBeforeUserInput.png)
