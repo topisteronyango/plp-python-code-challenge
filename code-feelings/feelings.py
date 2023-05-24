@@ -24,13 +24,13 @@ def feelings(feeling):
     elif feeling.lower() == 'sad':
         print(random.choice(negative_responses))
     elif feeling.lower() == 'excited':
-        print("I'm feeling excited! Ready to dive into web development projects!")
+        print("You're feeling excited! Ready to dive into web development projects!")
     elif feeling.lower() == 'angry':
-        print("I'm feeling angry. Time to channel that energy into personal growth!")
+        print("You're feeling angry. Time to channel that energy into personal growth!")
     elif feeling.lower() == 'loved':
-        print("I'm feeling loved. Grateful for the support on my learning journey!")
+        print("You're feeling loved. Grateful for the support on my learning journey!")
     else:
-        print("I'm not sure what you're feeling. Please try again.")
+        print("You're not sure what you're feeling. Please try again.")
 
 
 while True:
