@@ -1,1 +1,1 @@
-![App UI BEFORE USER INPUT](./FEELINGS/imageBeforeUserInput.png)
+![App UI BEFORE USER INPUT](imageBeforeUserInput.png)
