@@ -32,7 +32,11 @@ def feelings(feeling):
     elif feeling.lower() == 'loved':
         return "You're feeling loved. Grateful for the support on my learning journey!"
     else:
-        return "You're not sure what you're feeling. Please try again."
+        return "I'm not sure what you're feeling. Please try again."
+def remove_placeholder(event):
+    current_text = feeling_entry.get()
+    if current_text == "Enter your feeling here":
+        feeling_entry.delete(0, tk.END)
 
 def submit_feeling():
     feeling = feeling_entry.get()
@@ -47,13 +51,26 @@ root = tk.Tk()
 root.title("How Are You Feeling?")
 root.geometry("800x200")
 
-feeling_label = tk.Label(root, text="How are you feeling?")
+feeling_label = tk.Label(root, text="How are you feeling?\nChoose one option below:\n> Excited\n> Happy\n> Loved\n> Angry\n> Sad")
 feeling_label.pack()
+
+
+# feeling_entry = tk.Entry(root)
+# feeling_entry.pack()
+
+
 
 feeling_entry = tk.Entry(root)
 feeling_entry.pack()
+feeling_entry.insert(0, "Enter your feeling here")  # Add placeholder text
+
+feeling_entry.bind("<Button-1>", remove_placeholder)  # Bind the event to remove placeholder
 
 submit_button = tk.Button(root, text="Submit", command=submit_feeling)
-submit_button.pack()
+submit_button.pack(pady=10)  # Add 10 pixels of vertical space before the button
+
+
+# submit_button = tk.Button(root, text="Submit", command=submit_feeling)
+# submit_button.pack()
 
 root.mainloop()
