@@ -55,7 +55,7 @@ def submit_feeling():
 # Creating the GUI
 root = tk.Tk()
 root.title("How Are You Feeling?")
-root.geometry("800x200")
+root.geometry("600x300")
 
 feeling_label = tk.Label(root, text="How are you feeling?\nChoose one option below:\n> Excited\n> Happy\n> Loved\n> Angry\n> Sad")
 feeling_label.pack()
